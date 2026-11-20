@@ -1,0 +1,236 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/mdhasibulislamshishir-bit/PHITRON-AI-ML-COURSE/blob/main/mdhasibuislamshishir_gmail_com.ipynb%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cfQN7aOCqftm"
+      },
+      "source": [
+        "# problem1:division by 4 but not division by 8"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PQv72zcJY9vg",
+        "outputId": "52bf6a2b-41d9-4119-8178-bb5dd9690627"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "4 6 8 12 16 20 24 28 \n",
+            "[4, 12, 20, 28]\n"
+          ]
+        }
+      ],
+      "source": [
+        "numbers =list(map(int,input().split()))\n",
+        "result=[]\n",
+        "for n in numbers:\n",
+        "  if n%4==0 and n%8!=0:\n",
+        "    result.append(n)\n",
+        "\n",
+        "print(result)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "IPybG0A2dsnk"
+      },
+      "source": [
+        "# problem2: compute ratio with exception handling"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3JHydbMIcM9A",
+        "outputId": "0ef2399c-5a51-423e-c483-68f91401ad02"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            " 5 0\n",
+            "Error:division not possible\n"
+          ]
+        }
+      ],
+      "source": [
+        "numbers=list(map(int,input().split()))\n",
+        "x=numbers[0]\n",
+        "y=numbers[1]\n",
+        "result=0\n",
+        "if x==0 or y==0:\n",
+        "  print(\"Error:division not possible\")\n",
+        "else:result(x/y)/(x*y)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fDvDIChMdIIS"
+      },
+      "source": [
+        "#problem3: find the longest word"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "background_save": true,
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "X902cwOnFTLm",
+        "outputId": "e8af3003-b00e-4525-a287-be4198c4213f"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "wonderful\n"
+          ]
+        }
+      ],
+      "source": [
+        "with open(\"data.txt\", \"w\") as file:\n",
+        "    file.write(\"Python is a wonderful language for machine learning.\")\n",
+        "\n",
+        "with open(\"data.txt\", \"r\") as file:\n",
+        "    text = file.read()\n",
+        "\n",
+        "words = text.split()\n",
+        "longest_word = max(words, key=len)\n",
+        "\n",
+        "print(longest_word)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "zAPZMvlRE1zr"
+      },
+      "source": [
+        "# problem 4 :find words starting with vowel"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Wl8WehfejvJg",
+        "outputId": "cb2c8485-1099-4875-d7a8-5fd3cfc9a5f8"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "An apple a day keeps the doctor away\n",
+            "['An', 'apple', 'a', 'away']\n"
+          ]
+        }
+      ],
+      "source": [
+        "sentence= input()\n",
+        "words=sentence.split()\n",
+        "\n",
+        "result=[]\n",
+        "\n",
+        "for word in words:\n",
+        "  first_letter=word[0].lower()\n",
+        "\n",
+        "  if first_letter in \"aeiou\":\n",
+        "    result.append(word)\n",
+        "print(result)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "z4m9OY_ml1ox"
+      },
+      "source": [
+        "#problem 5:check wheather a word is palindrome"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RP00CPw1FeI-",
+        "outputId": "95a84e53-cb6c-48be-f2e3-0d84abc9a92b"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Radar\n",
+            "palindrome\n"
+          ]
+        }
+      ],
+      "source": [
+        "word =input()\n",
+        "word=word.lower()\n",
+        "\n",
+        "reverse= word [::-1]\n",
+        "if word==reverse:\n",
+        "  print(\"palindrome\")\n",
+        "else:\n",
+        "  print(\"not palindrome\")"
+      ]
+    }
+  ],
+  "metadata": {
+    "accelerator": "GPU",
+    "colab": {
+      "gpuType": "T4",
+      "provenance": [],
+      "authorship_tag": "ABX9TyMLzQl/vKXrIadnhaJaYqaq",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
